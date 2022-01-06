@@ -57,3 +57,6 @@
 
 수정
 
+# gitignore
+
+https://www.toptal.com/developers/gitignore
