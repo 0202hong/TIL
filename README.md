@@ -45,15 +45,56 @@
 
 ### 5. 텍스트 강조(Text Emphasis)
 
-- 텍스트 강조
+- 기울임 : `*텍스트*`혹은 `_글자_`
+- 굵게 : `**텍스트**` 혹은 `__글자`
+- 취소선 : `~~글자~~`
+- 함께도 사용 가능
 
-  
 
-  
 
-  
+### 6. 이미지(Image) `![대체 텍스트](url)`
 
-  working directory -(git add)-> staging area -(git commit - m 'message(why)')-> repository
+- 이미지 삽입 가능
+- 대체 텍스트 -> 이미지 정상적으로 불러오지 못했을 때 표시되는 문구
+
+
+
+### 7. 인용(Blockquote)
+
+- 주석이나 인용 문구 표현
+- `>`를 사용, 갯수에 따라 중첩이 가능
+
+> 인용문을 작성합니다.
+>
+> > 중첩된 인용문1
+> >
+> > > 중첩된 인용문2
+> > >
+> > > > 중첩된 인용문3
+> > > >
+> > > > > 중첩된 인용문4
+
+
+
+### 8. 표(Table)
+
+- 테이블(표)를 생성
+- `파이프(|)`와 `하이폰(-)`을 이용해서 행과 열 구분
+- 테이블 양쪽 끝의 `파이프(|)`는 생략 가능
+- 헤더 셀을 구분할 때는 `3개 이상의 하이폰(-)`이 필요함
+- Typora 에서는 `ctrl + T`를 통해서 쉽게 표 생성 가능
+- 행을 늘릴 때 `ctrl + T`
+
+
+
+### 9. 수평선(Horizontal Rule)
+
+- 구분 선 생성
+- `- * _`을 3번 이상 연속으로 작성
+
+
+
+working directory -(git add)-> staging area -(git commit - m 'message(why)')-> commit area -(git push)-> repository
 
 # **Git**
 
@@ -76,6 +117,7 @@
 - `git commit -m 'commit_message'`
 - `git remote add origin [git_repository_url]` : repository 연결
 - `git push origin master` : github로 밀어내기
+  - `git push -u origin master`: 다음 push 때는 origin master 안 적어도 됨
 
 
 
