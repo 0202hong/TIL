@@ -55,26 +55,48 @@
 
   working directory -(git add)-> staging area -(git commit - m 'message(why)')-> repository
 
-수정
+# **Git**
 
-# gitignore
+---
+
+## 한 번만 해도 되는 작업
+
+- `git config --global user.name [github_username]` : username 등록
+- `git config --global user.name` : username 확인
+- `git config --global user.email <github_email> ` : email 등록
+
+- `git config --global user.email ` : email 확인
+
+
+
+- `git init` : git 시작
+- `git add`
+  - `git add .` : 모든 파일 staging area에 올리기
+  - `git add [file_name]`: 파일 staging area에 올리기 
+- `git commit -m 'commit_message'`
+- `git remote add origin [git_repository_url]` : repository 연결
+- `git push origin master` : github로 밀어내기
+
+
+
+#### gitignore
 
 https://www.toptal.com/developers/gitignore
 
 
 
-clone : 아무 것도 없는 상태에서 레포를 끌어오는 것
+- clone : 아무 것도 없는 상태에서 레포를 끌어오는 것
 
-pull : 기존에 있는 것에서 레포를 업데이트(?) 하는 것 -> 다른 곳에서 수정한 것을 끌어옴
+- pull : 기존에 있는 것에서 레포를 업데이트(?) 하는 것 -> 다른 곳에서 수정한 것을 끌어옴
 
 
 
-가정
+#### 가정
 
 - 이미 레포지토리에 커밋이 올라가 있다.
 - pull, push 하는 권한이 있다.
 
-
+---
 
 - 빈 폴더(상위 폴더에 깃이 없어야 함)에 clone 사용
   - `git clone {url}` -> 새로운 폴더를 만듦
@@ -83,5 +105,28 @@ pull : 기존에 있는 것에서 레포를 업데이트(?) 하는 것 -> 다른
 - do something and push commit
   - 원격 저장소가 원본 로컬 저장소보다 상위 버전이 됨.
 - pull
-  - 원본 로컬 저장소에서 원격 저장소의 코밋을 pull 함
+  - 원본 로컬 저장소에서 원격 저장소의 commit을 pull 함
     - `git pull`
+
+
+
+
+
+#### branch
+
+- `git branch [branch_name]` : 새로운 branch 생성
+- `git branch` : branch 확인
+- `git merge [branch_name]` : branch와 합침 -> 기준이 될 branch에서
+- `git branch -d [branch_name]` : branch 삭제
+- `git switch [branch_name]` : branch 이동
+  - `git switch -c 'branch_name'`: branch 생성 후 이동
+  - `git checkout` : 과거에 사용했었음
+
+
+
+- git log --oneline(한 줄로) --all(모든 branch의 log 확인 가능) --graph(branch의 방향을 눈으로 확인하기 쉬움)
+
+![image-20220107103212689](README/image-20220107103212689.png)
+
+- git merge 이후 conflict 생겼을 때 conflict 해결 후 git commit 자동으로 merge branch [합친 branch_name]이라는 메세지 생성
+  - Fast-foward 메세지 : 잘 합쳐짐
