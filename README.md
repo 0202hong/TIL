@@ -108,7 +108,7 @@ working directory -(git add)-> staging area -(git commit - m 'message(why)')-> c
 
 - `git config --global user.email ` : email 확인
 
-
+---
 
 - `git init` : git 시작
 - `git add`
